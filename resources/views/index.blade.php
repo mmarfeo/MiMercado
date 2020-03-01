@@ -5,13 +5,6 @@
 @section ("principal")
 
 <!-- Contenido principal de la página -->
-  <main class="row">
-
-    <!-- Barra lateral -->
-    <section class="col-2 sidebar desaparece">
-      <img class="arte" src="img/arte-6.jpeg" alt=""/>
-    </section>
-    <div class="main-content col-xs-12 col-md-12 col-lg-10 row">
 
       <!-- Carousel -->
       <div class="carousel-container col-12 row">
@@ -57,21 +50,18 @@
             </a>
           </div>
 
-        </section>
-      </div>
-      <!-- Productos -->
+    <main class="row">
       <section class="col-12 row">
         <div class="products-container col-12 row">
 
           @forelse ($products as $product)
           <!-- col-4 -->
-            <article class="col-xs-12 col-md-6 col-lg-4">
+            <article class="col-xs-12 col-md-6 col-lg-3">
               <img class="index-product" src="/storage/IMGproduct/{{$product->img}}" alt="">
               <p class="col-12">Nombre: {{$product->name}}</p>
               <p class="col-12">Descripción: {{$product->description}}</p>
               <p class="col-12">Precio: ${{$product->price }}</p>
-              <!--<p class="col-12">Técnica</p>
-              <p class="col-12">Precio</p>-->
+
               
             @guest
                 <!-- Le saque al boton la clase -primary que es la que le da el color azul cuando se cliquea, viene por defecto en laravel -->
